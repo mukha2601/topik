@@ -1,7 +1,7 @@
 <script setup>
 import AboutItem from "~/components/about-item.vue";
 import data from "~/data";
-const { hero, about, results } = data;
+const { hero, about, results, opportunity } = data;
 </script>
 
 <template>
@@ -65,8 +65,34 @@ const { hero, about, results } = data;
   <!-- OPPORTUNITY -->
   <section>
     <UContainer>
-
+      <TitleSection>{{ opportunity.title }}</TitleSection>
+      <div class="grid grid-cols-3 space-x-8">
+        <NuxtImg :src="opportunity.img" class="w-full" />
+        <div class="right flex flex-col space-y-4 col-span-2">
+          <h3>{{ opportunity.subtitle1 }}</h3>
+          <p>{{ opportunity.description1 }}</p>
+          <h3>{{ opportunity.subtitle2 }}</h3>
+          <ul v-for="item in opportunity.description2">
+            <li>{{ item }}</li>
+          </ul>
+        </div>
+      </div>
     </UContainer>
   </section>
   <!-- OPPORTUNITY END-->
+
+  <!-- VIDEO -->
+  <section>
+    <UContainer>
+      <iframe
+      class="aspect-video"
+
+        src="https://www.youtube.com/embed/QY570G3M0O0?si=RbaVk7-aZ1QQ_OxC"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
+    </UContainer>
+  </section>
+  <!-- VIDEO END -->
 </template>

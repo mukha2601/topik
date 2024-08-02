@@ -58,5 +58,14 @@ export default {
   opportunity: {
     title: "Koreya Universitetlariga 100% gacha grant yutish imkoniyati",
     img: opportunityImage,
+    subtitle1: "GKS (Global Korean Scholarship) $70.000 lik Grant",
+    description1:
+      "Janubiy Koreya hukumatining stipendiya dasturi (GKS) Koreyaning Xalqaro ta'lim bo'yicha milliy instituti tomonidan xorijiy talabalarning Koreyada bakalavr va magistratura bosqichida 100% gacha to’liq grantva oylik stipendiya olish imkoniyatingiz bor",
+    subtitle2: "GKS granti sizga nima beradi",
+    description2: [
+      "Dastur boshlanganida va tugaganida Koreyaga borish hamda Koreyadan qaytish xarajatlari qoplanadi.",
+      "Koreyaga yetib borganda joylashib olish uchun bir martalik to'lovberiladi. Miqdori - 200 000 Koreya voni (taxminan 157 AQSh dollari).",
+      "Til kursi va universitetning kontrak to'lovi to'liq to'lab beriladi (faqat magistr va doktorantlarga)... ko’proq",
+    ],
   },
 };
