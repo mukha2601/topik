@@ -3,5 +3,5 @@ import img from "/topik-result.png";
 </script>
 
 <template>
-  <NuxtImg :src="img" />
+  <NuxtImg :src="img"/>
 </template>

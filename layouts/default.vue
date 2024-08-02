@@ -34,7 +34,7 @@ input {
 h1 {
   font-size: 54px;
 }
-h3{
+h3 {
   font-size: 26px;
 }
 p {

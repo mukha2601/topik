@@ -1,7 +1,7 @@
 <script setup>
 import AboutItem from "~/components/about-item.vue";
 import data from "~/data";
-const { hero, about, results, opportunity } = data;
+const { hero, about, results, opportunity, graduates, courses } = data;
 </script>
 
 <template>
@@ -85,14 +85,57 @@ const { hero, about, results, opportunity } = data;
   <section>
     <UContainer>
       <iframe
-      class="aspect-video"
-
-        src="https://www.youtube.com/embed/QY570G3M0O0?si=RbaVk7-aZ1QQ_OxC"
+        class="aspect-video w-full h-[700px]"
+        src="https://www.youtube.com/embed/Aj0DOJeh9Fc?si=id1NTR-fzXWtzHGd"
         frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen
       ></iframe>
+      <div class="w-full bg-[#333333] text-[32px] text-white p-4">
+        GKS granti haqida to’liq siz uchun tayyorlagan video suhbatimizda bilib
+        oling! ...
+      </div>
     </UContainer>
   </section>
   <!-- VIDEO END -->
+
+  <!-- GRADUATES -->
+  <section>
+    <UContainer class="overflow-hidden">
+      <TitleSection>{{ graduates.title }}</TitleSection>
+      <div class="flex mt-8">
+        <div
+          class="left w-1/3 shrink-0 flex flex-col justify-between space-y-8"
+        >
+          <h3>{{ graduates.subtitle1 }}</h3>
+          <p>{{ graduates.subtitle2 }}</p>
+          <Button>{{ graduates.button }}</Button>
+        </div>
+        <div class="right flex h-80 space-x-4">
+          <Carausel v-for="item in 10" />
+        </div>
+      </div>
+    </UContainer>
+  </section>
+  <!-- GRADUATES END -->
+
+  <!-- COURSES -->
+  <section>
+    <UContainer>
+      <TitleSection>{{ courses.title }}</TitleSection>
+      <div class="grid grid-cols-3 gap-4">
+        <CoursesCard
+          v-for="(item, index) in courses.card"
+          :key="index"
+          :title="item.title"
+          :img="item.img"
+          :description="item.description"
+          :duration="item.duration"
+          :price="item.price"
+          :button="item.button"
+        />
+      </div>
+    </UContainer>
+  </section>
+  <!-- COURSES END -->
 </template>

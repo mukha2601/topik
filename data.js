@@ -6,6 +6,9 @@ import icon4 from "/about-item (4).png";
 import icon5 from "/about-item (5).png";
 import icon6 from "/about-item (6).png";
 import opportunityImage from "/opportunityImage.png";
+import courseImg1 from "/courses (1).png";
+import courseImg2 from "/courses (2).png";
+import courseImg3 from "/courses (3).png";
 
 export default {
   hero: {
@@ -66,6 +69,46 @@ export default {
       "Dastur boshlanganida va tugaganida Koreyaga borish hamda Koreyadan qaytish xarajatlari qoplanadi.",
       "Koreyaga yetib borganda joylashib olish uchun bir martalik to'lovberiladi. Miqdori - 200 000 Koreya voni (taxminan 157 AQSh dollari).",
       "Til kursi va universitetning kontrak to'lovi to'liq to'lab beriladi (faqat magistr va doktorantlarga)... ko’proq",
+    ],
+  },
+  graduates: {
+    title:
+      "Muvafaqqiyatli bitiruvchilarimizga universitet tanlash va grant yutishda yordam beramiz",
+    subtitle1:
+      "TOPIK academy consulting jamoasi sizga universitet tanlash, visa olish va grant yutishingizda yaqindan ko’maklashadi",
+    subtitle2: "Ko’proq ma’lumot olish uchun bepul konsultatsiyaga yoziling!",
+    button: "ariza qoldirish",
+  },
+  courses: {
+    title: "O’zingizga mos kursga ro’yxatdan o’ting",
+    card: [
+      {
+        img: courseImg1,
+        title: "Intiensive",
+        duration: "Davomiyligi: 5 oy",
+        description:
+          "Koreys tilini chuqur o’zlashtirmoqchi bo’lganlar uchun haftada 6 kun 1.5 soatdan intensive kurs.",
+        button: "ro'yhatdan o'tish",
+        price: "970.000 so’m /oy",
+      },
+      {
+        img: courseImg2,
+        title: "Odatiy",
+        duration: "Davomiyligi: 5 oy",
+        description:
+          "Haftada 3 kun 1.5 soatdan iborat odatiy Koreys tili darslari.",
+        button: "ro'yhatdan o'tish",
+        price: "560.000 so’m /oy",
+      },
+      {
+        img: courseImg3,
+        title: "Individual",
+        duration: "Davomiyligi: 5 oy",
+        description:
+          "O’qituvchidan individual dars olmoqchi bo’lganlar uchun haftada 3 kun 1.5 soatdan darslar. Moslashuvchan grafik va individual yondashuv.",
+        button: "ro'yhatdan o'tish",
+        price: "1.800.000 so’m /oy",
+      },
     ],
   },
 };
