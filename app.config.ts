@@ -1,6 +1,7 @@
 export default defineAppConfig({
-  ui: {
-    primary: "blue",
-    gray: "cool",
+  googleFonts: {
+    families: {
+      Kanit: "200..900",
+    },
   },
 });
