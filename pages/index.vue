@@ -1,5 +1,6 @@
 <script setup>
 import AboutItem from "~/components/about-item.vue";
+import TitleSection from "~/components/title-section.vue";
 import data from "~/data";
 const {
   hero,
@@ -17,27 +18,29 @@ const {
 <template>
   <!-- HERO -->
   <section>
-    <UContainer class="h-[80vh] flex flex-col justify-between overflow-hidden">
-      <p>{{ hero.subtitle1 }}</p>
-      <h1 class="w-[75%]">{{ hero.title }}</h1>
-      <div class="flex w-1/2">
-        <div class="left flex">
-          <NuxtImg src="/hero.svg" />
-          <p>{{ hero.subtitle2 }}</p>
+    <UContainer class="h-[80vh] flex justify-between">
+      <div class="left flex flex-col">
+        <p>{{ hero.subtitle1 }}</p>
+        <TitleSection class="w-full">{{ hero.title }}</TitleSection>
+        <div class="flex">
+          <div class="left flex">
+            <NuxtImg src="/hero.svg" />
+            <p>{{ hero.subtitle2 }}</p>
+          </div>
+          <div class="right flex">
+            <NuxtImg src="/hero.svg" />
+            <p>{{ hero.subtitle3 }}</p>
+          </div>
         </div>
-        <div class="right flex">
-          <NuxtImg src="/hero.svg" />
-          <p>{{ hero.subtitle3 }}</p>
+        <div>
+          <Button>{{ hero.button.toUpperCase() }}</Button>
+          <p>{{ hero.buttonSubtitle }}</p>
         </div>
       </div>
-      <div>
-        <Button>{{ hero.button.toUpperCase() }}</Button>
-        <p>{{ hero.buttonSubtitle }}</p>
-      </div>
-      <!-- <NuxtImg
+      <NuxtImg
         src="/hero-right-photo.svg"
-        class="absolute -right-10 top-[15vh] w-[900px]"
-      /> -->
+        class="-right-10 top-[15vh] w-[600px]"
+      />
     </UContainer>
   </section>
   <!-- HERO END -->
@@ -173,8 +176,8 @@ const {
       <UAccordion
         multiple
         :items="questions.items"
-        open-icon="ep:circle-plus"
-        close-icon="ep:circle-close"
+        open-icon="ep:circle-plus-filled"
+        close-icon="ep:circle-close-filled"
         :ui="{ wrapper: 'w-full flex flex-col bg-white' }"
       />
 
