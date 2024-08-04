@@ -17,36 +17,40 @@ const {
 
 <template>
   <!-- HERO -->
-  <section>
-    <UContainer class="h-[80vh] flex justify-between">
-      <div class="left flex flex-col">
+  <section id="hero">
+    <UContainer class="flex justify-between">
+      <div class="left flex flex-col lg:w-1/2 gap-5 md:gap-10">
         <p>{{ hero.subtitle1 }}</p>
-        <TitleSection class="w-full">{{ hero.title }}</TitleSection>
-        <div class="flex">
-          <div class="left flex">
-            <NuxtImg src="/hero.svg" />
+        <TitleSection class="w-full text-start">{{ hero.title }}</TitleSection>
+        <div
+          class="grid max-[500px]:grid-cols-1 grid-cols-2 gap-6 max-md:w-full max-lg:w-[80%]"
+        >
+          <div class="left flex space-x-4 items-center">
+            <img src="/hero.svg" width="30" class="shrink-0" />
             <p>{{ hero.subtitle2 }}</p>
           </div>
-          <div class="right flex">
-            <NuxtImg src="/hero.svg" />
+          <div class="right flex space-x-4 items-center">
+            <img src="/hero.svg" width="30" class="shrink-0" />
             <p>{{ hero.subtitle3 }}</p>
           </div>
         </div>
         <div>
           <Button>{{ hero.button.toUpperCase() }}</Button>
-          <p>{{ hero.buttonSubtitle }}</p>
+          <p class="mt-3">{{ hero.buttonSubtitle }}</p>
         </div>
       </div>
+      <!-- <div class="w-1/2 border-2 p-2"> -->
       <NuxtImg
-        src="/hero-right-photo.svg"
-        class="-right-10 top-[15vh] w-[600px]"
+        src="/heroImg.png"
+        class="max-lg:hidden w-1/2 border-2 p-2 object-cover"
       />
+      <!-- </div> -->
     </UContainer>
   </section>
   <!-- HERO END -->
 
   <!-- ABOUT -->
-  <section>
+  <section id="about">
     <UContainer>
       <TitleSection>{{ about.title }}</TitleSection>
 
@@ -65,7 +69,7 @@ const {
   <!-- ABOUT END -->
 
   <!-- RESULTS -->
-  <section>
+  <section id="results">
     <div class="flex flex-col space-y-10">
       <TitleSection>{{ results.title }}</TitleSection>
       <div class="flex space-x-4 overflow-hidden h-72">
@@ -76,7 +80,7 @@ const {
   <!-- RESULTS END -->
 
   <!-- OPPORTUNITY -->
-  <section>
+  <section id="opportunity">
     <UContainer>
       <TitleSection>{{ opportunity.title }}</TitleSection>
       <div class="grid grid-cols-3 space-x-8">
@@ -95,7 +99,7 @@ const {
   <!-- OPPORTUNITY END-->
 
   <!-- VIDEO -->
-  <section>
+  <section id="video">
     <UContainer>
       <iframe
         class="aspect-video w-full h-[700px]"
@@ -113,7 +117,7 @@ const {
   <!-- VIDEO END -->
 
   <!-- GRADUATES -->
-  <section>
+  <section id="graduates">
     <UContainer class="overflow-hidden">
       <TitleSection>{{ graduates.title }}</TitleSection>
       <div class="flex mt-8">
@@ -133,7 +137,7 @@ const {
   <!-- GRADUATES END -->
 
   <!-- COURSES -->
-  <section>
+  <!-- <section id="courses">
     <UContainer>
       <TitleSection>{{ courses.title }}</TitleSection>
       <div class="grid grid-cols-3 gap-4">
@@ -149,11 +153,11 @@ const {
         />
       </div>
     </UContainer>
-  </section>
+  </section> -->
   <!-- COURSES END -->
 
   <!-- WHY US -->
-  <section>
+  <section id="whyUs">
     <UContainer>
       <TitleSection>{{ whyUs.title }}</TitleSection>
       <div class="grid grid-cols-3">
@@ -170,7 +174,7 @@ const {
   <!-- WHY US END -->
 
   <!-- QUESTIONS -->
-  <section>
+  <section id="questions">
     <UContainer>
       <TitleSection>{{ questions.title }}</TitleSection>
       <UAccordion
@@ -180,7 +184,13 @@ const {
         close-icon="ep:circle-close-filled"
         :ui="{ wrapper: 'w-full flex flex-col bg-white' }"
       />
+    </UContainer>
+  </section>
+  <!-- QUESTIONS END -->
 
+  <!-- QUESTIONS FORM -->
+  <section id="questionsForm">
+    <UContainer>
       <div class="w-full p-4 bg-primary grid grid-cols-2">
         <div class="left flex flex-col w-full space-y-4 items-center">
           <h1>{{ questionsForm.title }}</h1>
@@ -194,5 +204,5 @@ const {
       </div>
     </UContainer>
   </section>
-  <!-- QUESTIONS END -->
+  <!-- QUESTIONS FORM END -->
 </template>
