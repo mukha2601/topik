@@ -111,4 +111,74 @@ export default {
       },
     ],
   },
+  whyUs: {
+    title: "Nima uchun aynan TOPIK academy?",
+    items: [
+      {
+        title: "Professional ustozlar",
+        description:
+          "Sizga 4 yildan ortiq tajriba va Topik darajasi 6 bo'lgan o'qituvchilar dars beradi",
+      },
+      {
+        title: "Bepul coworking zonalari",
+        description:
+          "Erkin dars qilish, netvorking va o'z ustingizda ishlash uchun bepul coworking zonalarimiz mavjud",
+      },
+      {
+        title: "Haftalik tadbirlar",
+        description:
+          "TOPIK acdemy jamoasi o'quvchilari uchun doimiy ravishda qo'shimcha tadbirar tashkilb keladi",
+      },
+      {
+        title: "Bepul sinov imtihonlari",
+        description:
+          "Har davomida tashkillanadigan sinov imtihonlarida qatnashib o'z darajangizni bilib borasiz",
+      },
+      {
+        title: "Yordamchi kuratorlar",
+        description:
+          "Darslarni o'zlashtirishda qiyinchilik bo'lsa sizga yordam beradigan kuratoringiz bo'ladi",
+      },
+      {
+        title: "Konsulting xizmatlar",
+        description:
+          "Muvafaqiyatli bitirgan talabalarimizga Janubiy Koreyada o'qish uchun visa olishda, universitet tanlash va grand yutishda yordam beramiz",
+      },
+    ],
+  },
+  questions: {
+    title: "Ko’p beriladigan savollar",
+    items: [
+      {
+        label:
+          "O’quv materallar bilan ta’minlaysizlarmi yoki o’zim izlab topamanami?",
+        content:
+          "      Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, cumque! Quae, similique. Quis vitae expedita, odio veritatis fugit quas impedit.",
+      },
+      {
+        label:
+          "O’quv materallar bilan ta’minlaysizlarmi yoki o’zim izlab topamanami?",
+        content:
+          "      Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, cumque! Quae, similique. Quis vitae expedita, odio veritatis fugit quas impedit.",
+      },
+      {
+        label:
+          "O’quv materallar bilan ta’minlaysizlarmi yoki o’zim izlab topamanami?",
+        content:
+          "      Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, cumque! Quae, similique. Quis vitae expedita, odio veritatis fugit quas impedit.",
+      },
+      {
+        label:
+          "O’quv materallar bilan ta’minlaysizlarmi yoki o’zim izlab topamanami?",
+        content:
+          "      Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, cumque! Quae, similique. Quis vitae expedita, odio veritatis fugit quas impedit.",
+      },
+    ],
+  },
+  questionsForm: {
+    title: "Savollaringiz qoldimi?",
+    subtitle:
+      "Ma’lumotlaringizni qoldiring siz bilan bog’lanib barcha savollaringizga javob beramiz.",
+    button: "savol berish",
+  },
 };

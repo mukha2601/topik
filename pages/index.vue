@@ -1,7 +1,17 @@
 <script setup>
 import AboutItem from "~/components/about-item.vue";
 import data from "~/data";
-const { hero, about, results, opportunity, graduates, courses } = data;
+const {
+  hero,
+  about,
+  results,
+  opportunity,
+  graduates,
+  courses,
+  whyUs,
+  questions,
+  questionsForm,
+} = data;
 </script>
 
 <template>
@@ -138,4 +148,48 @@ const { hero, about, results, opportunity, graduates, courses } = data;
     </UContainer>
   </section>
   <!-- COURSES END -->
+
+  <!-- WHY US -->
+  <section>
+    <UContainer>
+      <TitleSection>{{ whyUs.title }}</TitleSection>
+      <div class="grid grid-cols-3">
+        <WhyUsCard
+          v-for="(item, index) in whyUs.items"
+          :key="index"
+          :num="index"
+          :title="item.title"
+          :description="item.description"
+        />
+      </div>
+    </UContainer>
+  </section>
+  <!-- WHY US END -->
+
+  <!-- QUESTIONS -->
+  <section>
+    <UContainer>
+      <TitleSection>{{ questions.title }}</TitleSection>
+      <UAccordion
+        multiple
+        :items="questions.items"
+        open-icon="ep:circle-plus"
+        close-icon="ep:circle-close"
+        :ui="{ wrapper: 'w-full flex flex-col bg-white' }"
+      />
+
+      <div class="w-full p-4 bg-primary grid grid-cols-2">
+        <div class="left flex flex-col w-full space-y-4 items-center">
+          <h1>{{ questionsForm.title }}</h1>
+          <p>{{ questionsForm.subtitle }}</p>
+        </div>
+        <div class="right flex flex-col w-full space-y-4 items-center">
+          <input type="text" placeholder="ismingiz" />
+          <input type="number" placeholder="+99890-900-90-90" />
+          <Button>{{ questionsForm.button.toUpperCase() }}</Button>
+        </div>
+      </div>
+    </UContainer>
+  </section>
+  <!-- QUESTIONS END -->
 </template>
