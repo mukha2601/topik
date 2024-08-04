@@ -5,19 +5,14 @@
     <UContainer class="flex justify-between items-center">
       <Logo />
       <nav class="space-x-8 max-lg:hidden">
-        <ULink
-          to="#about"
-          active-class="text-primary"
-          inactive-class="text-black  hover:text-red-700"
-          >Nega biz</ULink
-        >
+        <ULink to="#about" >Nega biz</ULink>
         <ULink to="#results">Natijalar</ULink>
         <ULink to="#courses">Kurslar</ULink>
         <ULink to="#questions">Ko'p beriladigan savollar</ULink>
       </nav>
       <div class="flex space-x-4">
         <nuxt-link to="tel:+998906549659">
-          <Button>
+          <Button class="flex items-center gap-2">
             <Icon name="material-symbols:phone-in-talk" />
             Bog'lanish
           </Button>

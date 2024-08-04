@@ -35,7 +35,9 @@ const {
           </div>
         </div>
         <div>
-          <Button>{{ hero.button.toUpperCase() }}</Button>
+          <ULink to="#courses">
+            <Button>{{ hero.button.toUpperCase() }}</Button>
+          </ULink>
           <p class="mt-3">{{ hero.buttonSubtitle }}</p>
         </div>
       </div>
@@ -101,13 +103,15 @@ const {
   <!-- VIDEO -->
   <section id="video">
     <UContainer>
-      <iframe
-        class="aspect-video w-full h-[700px]"
-        src="https://www.youtube.com/embed/Aj0DOJeh9Fc?si=id1NTR-fzXWtzHGd"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen
-      ></iframe>
+      <div class="w-full shrink-0">
+        <iframe
+          class="w-full h-[600px]"
+          src="https://www.youtube.com/embed/Aj0DOJeh9Fc?si=id1NTR-fzXWtzHGd"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </div>
       <div class="w-full bg-[#333333] text-[32px] text-white p-4">
         GKS granti haqida to’liq siz uchun tayyorlagan video suhbatimizda bilib
         oling! ...
@@ -137,7 +141,7 @@ const {
   <!-- GRADUATES END -->
 
   <!-- COURSES -->
-  <!-- <section id="courses">
+  <section id="courses">
     <UContainer>
       <TitleSection>{{ courses.title }}</TitleSection>
       <div class="grid grid-cols-3 gap-4">
@@ -153,7 +157,7 @@ const {
         />
       </div>
     </UContainer>
-  </section> -->
+  </section>
   <!-- COURSES END -->
 
   <!-- WHY US -->
