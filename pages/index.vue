@@ -85,9 +85,11 @@ const {
   <section id="opportunity">
     <UContainer>
       <TitleSection>{{ opportunity.title }}</TitleSection>
-      <div class="grid grid-cols-3 space-x-8">
-        <NuxtImg :src="opportunity.img" class="w-full" />
-        <div class="right flex flex-col space-y-4 col-span-2">
+      <div class="flex md:space-x-8 py-4">
+        <div class="w-1/3 max-md:hidden">
+          <img :src="opportunity.img" class="w-full" />
+        </div>
+        <div class="right md:w-2/3 flex flex-col space-y-4">
           <h3>{{ opportunity.subtitle1 }}</h3>
           <p>{{ opportunity.description1 }}</p>
           <h3>{{ opportunity.subtitle2 }}</h3>
@@ -124,16 +126,18 @@ const {
   <section id="graduates">
     <UContainer class="overflow-hidden">
       <TitleSection>{{ graduates.title }}</TitleSection>
-      <div class="flex mt-8">
+      <div class="flex mt-8 gap-6">
         <div
           class="left w-1/3 shrink-0 flex flex-col justify-between space-y-8"
         >
           <h3>{{ graduates.subtitle1 }}</h3>
           <p>{{ graduates.subtitle2 }}</p>
-          <Button>{{ graduates.button }}</Button>
+          <div>
+            <Button>{{ graduates.button }}</Button>
+          </div>
         </div>
-        <div class="right flex h-80 space-x-4">
-          <Carausel v-for="item in 10" />
+        <div class="right flex h-80 space-x-4 max-[900px]:hidden">
+          <Carausel v-for="item in 8" />
         </div>
       </div>
     </UContainer>

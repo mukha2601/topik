@@ -11,7 +11,7 @@ defineProps<{
 
 <template>
   <div class="w-full bg-[#f7f7f7] h-[500px]">
-    <NuxtImg :src="img" class="h-1/2 object-cover"/>
+    <img :src="img" class="h-1/2 object-cover"/>
     <div class="w-full h-1/2 p-4 flex flex-col justify-between">
       <div class="flex justify-between">
         <h4>{{ title }}</h4>
